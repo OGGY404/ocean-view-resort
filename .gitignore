@@ -1,0 +1,30 @@
+# ===== Java / Spring Boot =====
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ===== Node / React =====
+node_modules/
+dist/
+.env
+.env.local
+npm-debug.log*
+
+# ===== IDEs =====
+.idea/
+*.iml
+.vscode/settings.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
