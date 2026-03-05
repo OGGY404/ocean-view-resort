@@ -19,6 +19,7 @@ function Navbar() {
         <Link to="/reservations">All Bookings</Link>
         <Link to="/search">Search Guest</Link>
         <Link to="/reports">Reports</Link>
+        <Link to="/rooms">Rooms</Link>
         <Link to="/help">Help</Link>
         <span style={{ marginLeft: '20px', opacity: 0.8 }}>
           {user?.username} ({user?.role === 'ROLE_ADMIN' ? 'Admin' : 'Staff'})

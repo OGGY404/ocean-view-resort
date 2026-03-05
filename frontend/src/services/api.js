@@ -37,8 +37,11 @@ export const updateStatus       = (number, status) =>
   api.put(`/reservations/${number}/status?status=${status}`)
 
 // Rooms
-export const getRooms          = ()    => api.get('/rooms')
-export const getAvailableRooms = ()    => api.get('/rooms/available')
+export const getRooms          = ()                       => api.get('/rooms')
+export const getAvailableRooms = ()                       => api.get('/rooms/available')
+export const addRoom           = (data)                   => api.post('/rooms', data)
+export const updateRoomPrice   = (roomNumber, price)      => api.put(`/rooms/${roomNumber}/price?price=${price}`)
+export const deleteRoom        = (roomNumber)             => api.delete(`/rooms/${roomNumber}`)
 
 // Reports
 export const getBookingHistory = (start, end) =>

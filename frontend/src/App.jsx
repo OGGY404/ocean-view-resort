@@ -10,6 +10,7 @@ import GuestSearch from './pages/GuestSearch'
 import BillPage from './pages/BillPage'
 import Reports from './pages/Reports'
 import Help from './pages/Help'
+import RoomList from './pages/RoomList'
 
 /**
  * App.jsx — Root component. Defines all routes (pages).
@@ -45,6 +46,7 @@ function App() {
             <Route path="/bill/:number"     element={<Layout><BillPage /></Layout>} />
             <Route path="/reports"          element={<Layout><Reports /></Layout>} />
             <Route path="/help"             element={<Layout><Help /></Layout>} />
+            <Route path="/rooms"            element={<Layout><RoomList /></Layout>} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -43,6 +43,17 @@ public class RoomService {
         roomRepository.save(room);
     }
 
+    public Room updateRoomPrice(String roomNumber, double newPrice) {
+        Room room = getRoomByNumber(roomNumber);
+        room.setPricePerNight(newPrice);
+        return roomRepository.save(room);
+    }
+
+    public void deleteRoom(String roomNumber) {
+        Room room = getRoomByNumber(roomNumber);
+        roomRepository.delete(room);
+    }
+
     /**
      * Seeds initial room data if no rooms exist.
      */

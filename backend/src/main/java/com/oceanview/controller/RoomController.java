@@ -37,4 +37,16 @@ public class RoomController {
     public ResponseEntity<Room> addRoom(@RequestBody Room room) {
         return ResponseEntity.ok(roomService.addRoom(room));
     }
+
+    @PutMapping("/{roomNumber}/price")
+    public ResponseEntity<Room> updatePrice(@PathVariable String roomNumber,
+                                            @RequestParam double price) {
+        return ResponseEntity.ok(roomService.updateRoomPrice(roomNumber, price));
+    }
+
+    @DeleteMapping("/{roomNumber}")
+    public ResponseEntity<Void> deleteRoom(@PathVariable String roomNumber) {
+        roomService.deleteRoom(roomNumber);
+        return ResponseEntity.ok().build();
+    }
 }
